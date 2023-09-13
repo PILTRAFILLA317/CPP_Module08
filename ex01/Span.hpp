@@ -21,6 +21,7 @@ class Span
 		Span &operator=(const Span &copy);
 
 		void addNumber(int n);
+		void addRange(std::vector<int> vec);
 		int shortestSpan();
 		int longestSpan();
 

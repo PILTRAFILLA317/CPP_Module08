@@ -48,6 +48,13 @@ int Span::longestSpan(){
 	return (tmp[tmp.size() - 1] - tmp[0]);
 }
 
+void Span::addRange(std::vector<int> vec){
+	if (this->_v.size() + vec.size() <= this->_n)
+		this->_v.insert(this->_v.end(), vec.begin(), vec.end());
+	else
+		throw Span::FullException();
+}
+
 const char *Span::FullException::what() const throw(){
 	return ("Span is full");
 }
